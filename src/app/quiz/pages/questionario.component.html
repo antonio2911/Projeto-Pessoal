@@ -1,0 +1,16 @@
+<h1>
+  Questionario: O que você obtém ao adicionar @for (color of question().legenda;
+  track color) { @if($index > 0) { @if ($last) { and } @else { , } }
+
+  {{ color | nomeCor }}
+  <span class="color-item" [style.background]="color"></span>
+  } ?
+</h1>
+<div class="answers">
+  @for(answer of question().respostas; track answer) {
+  <div class="answer">
+    <div class="thumbnail" [style.background]="answer"></div>
+    <div class="caption">{{ answer | nomeCor }}</div>
+  </div>
+  }
+</div>

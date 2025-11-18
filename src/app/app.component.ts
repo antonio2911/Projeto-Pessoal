@@ -2,10 +2,20 @@ import { Component, computed } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Person } from './models/person.model';
 import { patchState, signalState } from '@ngrx/signals';
+import { QuestionarioComponent } from './quiz/pages/questionario.component';
+import { ProgressoComponent } from './quiz/components/progresso/progresso.component';
+import { DoneComponent } from './quiz/components/done/done.component';
+import { ToolbarComponent } from './quiz/components/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    QuestionarioComponent,
+    ProgressoComponent,
+    DoneComponent,
+    ToolbarComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
